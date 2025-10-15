@@ -2,4 +2,4 @@
 // Define la URL desde donde cargarás el JSON con el mismo shape de `context` del psutil-dashboard
 // Si lo dejas vacío, se usará data.json local para prueba
 // Ejemplo: const DATA_URL = "https://tu-proyecto.vercel.app/api/context.json";
-const DATA_URL = "";
+const DATA_URL = "https://webdashboard-rho.vercel.app/api/metrics";
