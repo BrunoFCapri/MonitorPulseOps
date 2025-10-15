@@ -43,6 +43,12 @@ function render(context) {
   setText('power_time', pw.time_remaining);
   setText('power_source', pw.power_source);
 
+  // CPU total (overview)
+  const cpuTotal = context.cpu_total_percent;
+  if (typeof cpuTotal !== 'undefined' && cpuTotal !== null) {
+    setText('cpu_total_percent', Number(cpuTotal).toFixed(1) + '%');
+  }
+
   // Users
   const usersBody = document.getElementById('users_body');
   usersBody.innerHTML = '';
