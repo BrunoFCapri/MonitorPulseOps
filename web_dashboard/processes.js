@@ -16,8 +16,8 @@ function renderProcesses(ctx) {
     procs
       .filter(p => !text || (p.name || '').toLowerCase().includes(text))
       .forEach(p => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `<td>${p.pid||''}</td><td>${p.name||''}</td><td>${p.cpu_percent||''}</td><td>${p.memory_percent||''}</td><td>${p.username||''}</td><td>${(p.cmdline||[]).join(' ')}</td>`;
+  const tr = document.createElement('tr');
+  tr.innerHTML = `<td>${p.pid ?? ''}</td><td>${p.name ?? ''}</td><td>${p.cpu_percent ?? ''}</td><td>${p.memory_percent ?? ''}</td><td>${p.username ?? ''}</td><td>${(p.cmdline ?? []).join(' ')}</td>`;
         tbody.appendChild(tr);
       });
   }
