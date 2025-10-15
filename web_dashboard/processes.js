@@ -17,7 +17,9 @@ function renderProcesses(ctx) {
       .filter(p => !text || (p.name || '').toLowerCase().includes(text))
       .forEach(p => {
   const tr = document.createElement('tr');
-  tr.innerHTML = `<td>${p.pid ?? ''}</td><td>${p.name ?? ''}</td><td>${p.cpu_percent ?? ''}</td><td>${p.memory_percent ?? ''}</td><td>${p.username ?? ''}</td><td>${(p.cmdline ?? []).join(' ')}</td>`;
+  const cpu = (p.cpu_percent !== null && p.cpu_percent !== undefined) ? (Number(p.cpu_percent).toFixed(1) + '%') : '';
+  const mem = (p.memory_percent !== null && p.memory_percent !== undefined) ? (Number(p.memory_percent).toFixed(1) + '%') : '';
+  tr.innerHTML = `<td>${p.pid ?? ''}</td><td>${p.name ?? ''}</td><td>${cpu}</td><td>${mem}</td><td>${p.username ?? ''}</td><td>${(p.cmdline ?? []).join(' ')}</td>`;
         tbody.appendChild(tr);
       });
   }
