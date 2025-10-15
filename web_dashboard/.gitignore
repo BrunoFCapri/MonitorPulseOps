@@ -1,0 +1,13 @@
+# Dependencias y artefactos comunes
+node_modules/
+*.log
+dist/
+build/
+
+# SO / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Vercel (deploy uses .vercelignore; this is for Git)
+.vercel

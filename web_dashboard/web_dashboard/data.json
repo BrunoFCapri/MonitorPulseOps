@@ -1,0 +1,33 @@
+{
+  "context": {
+    "platform_info": {
+      "os_name": "windows",
+      "node_name": "DESKTOP-1234",
+      "system_name": "Windows",
+      "release_version": "11",
+      "architecture": "x86_64",
+      "processor_type": "AMD Ryzen",
+      "boot_time": "1 day 02:33"
+    },
+    "memory_info": {
+      "svmem_total": "15.9 GB",
+      "svem_percent": 37,
+      "smem_total": "7.9 GB",
+      "smem_percent": 12
+    },
+    "power_info": {
+      "percent": 98,
+      "time_remaining": "--",
+      "power_source": "AC Power"
+    },
+    "user_info": {
+      "0": {"name": "bruno", "terminal": "tty0", "host": "", "started_str": "14-10-25 09:15", "pid": 1200}
+    },
+    "disk_info": {
+      "C": {"device": "C:", "mounted": "C:/", "total": "475 GB", "used": "130 GB", "free": "345 GB"}
+    },
+    "network_info": {
+      "Ethernet": {"name": "Ethernet", "ip_address": "192.168.1.50", "sent_bytes": 123456, "received_bytes": 987654}
+    }
+  }
+}
