@@ -48,3 +48,20 @@ Para variables seguras/secreta, usa Functions en Vercel y no las expongas en el 
 ## Notas
 - Si usas una API externa, asegúrate de que tenga CORS habilitado para tu dominio de Vercel.
 - Para depurar, revisa los logs del deployment en el dashboard de Vercel.
+
+## Nota sobre la carpeta `api/` eliminada
+
+Se eliminó la carpeta `web_dashboard/api/` del repositorio porque ya no se usa el código que requería tokens para exponer métricas. Si necesitas enviar datos a la UI desde un servicio externo, puedes:
+
+- Usar un script/servicio separado que publique un `data.json` accesible públicamente.
+- O configurar `config.js` para apuntar a una URL de datos remota (ejemplo):
+
+```js
+// web_dashboard/config.js
+// Puntos de datos remotos — reemplaza con tu endpoint
+const DATA_URL = 'https://mi-servicio.example.com/metrics/data.json';
+```
+
+Recuerda que el script cliente (`app.js`) carga `DATA_URL` si existe; de lo contrario usa `./data.json` local.
+
+Si quieres, puedo añadir instrucciones para desplegar un pequeño endpoint (Flask/Express) que sirva `data.json` y habilite CORS.
