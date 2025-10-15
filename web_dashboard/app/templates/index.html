@@ -65,6 +65,26 @@
                 </div>
             </div>
 
+            <!-- CPU Total -->
+            <div class="col-sm-6 col-lg-3 mb-4">
+                <div class="card h-100 bg-dark text-white">
+                    <div class="d-flex card-header justify-content-between">
+                        <h5>CPU Total</h5>
+                        <h5>
+                            <i class="fa-solid fa-microchip text-info"></i>
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover text-left table-dark text-muted">
+                            <tr>
+                                <td scope="row"> CPU Usage: </td>
+                                <td id="cpu_total_percent"> {{ context.cpu_total_percent }}% </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
             <!-- Power Information -->
             <div class="col-sm-6 col-lg-3 mb-4">
                 <div class="card h-100 bg-dark text-white">
